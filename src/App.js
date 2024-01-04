@@ -12,9 +12,9 @@ function App() {
       
          <Card cardContent={{
           imgSrc:cardItem.imgSrc,
-          name:cardItem.name,
-          phone:cardItem.phone,
-          email:cardItem.email
+          placeName:cardItem.placeName,
+          placeDescription:cardItem.placeDescription,
+          
          }}
          />
          
