@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.App{
+    
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Roboto",sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: orange;
+    padding: 20px;
+    
+    justify-content: space-between;
+}
+header.dayMode{
+    background-color: "orange";
+}
+header.darkMode{
+    background-color: "black";
+}
+header .logo{
+    font-size: 18px;
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+header .nav a{
+    color: black;
+    display: block;
+    margin:0 5px;
+    padding: 5px;
+}
+.display-flex {
+    display: flex;
+}
+
+footer{
+    background-color: lightseagreen;
+    padding: 20px;
+    text-align: center;
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.card{
+    margin: 20px;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+.hero{
+    padding: 20px;
+    background-color:lightskyblue ;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
