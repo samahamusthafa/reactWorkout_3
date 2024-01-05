@@ -1,44 +1,32 @@
 import React, { useState } from 'react';
-
 import heart from "../assets/heart-solid.svg";
 
 function Card(props) {
-    // let favourites = useState("Add to favourite");
+    const [isFavourite, setIsFavourite] = useState(false);
 
-    // let favBtnText = favourites[0];
-    // let setFavourite = favourites[1];
+    const addToFavourite = () => {
+        setIsFavourite(!isFavourite);
+        if (!isFavourite) {
+            props.getFavImages(props.cardContent.imgSrc);
+        }else {
+            props.removeFavImages(props.cardContent.imgSrc);
+          }
+    };
 
-    let [btnTextState,setBtnTextState] = useState("Add to favaourite");
-    let [classState,setClassState] = useState("");
+    return (
+        <div className={`card ${isFavourite ? 'active' : ''}`}>
+            <div className='icon'>
+                {isFavourite && <img src={heart} className='icon' alt='heart' />}
+            </div>
 
-    function addToFavourite(){
-        setBtnTextState((prevState)=>{
-            if(prevState === "Add to favourite"){
-                return "Added to favourite";
-            }else{
-                return "Add to favourite";
-            }
-        })
-
-        setClassState((prevClass)=>{
-            if(prevClass == ""){
-                return "active";
-            }else{
-                return "";
-            }
-        })
-    }
-  return (
-    <div className={`card ${classState}`}>
-        <img src={heart} className='icon'/>
-        <img src={props.cardContent.imgSrc} alt=''/>
-        <h3>{props.cardContent.placeName}</h3>
-        <p>Ph:{props.cardContent.placeDescription}</p>
-        <button onClick={addToFavourite}>{btnTextState}</button>
-        
-      
-    </div>
-  )
+            <img src={props.cardContent.imgSrc} alt='' />
+            <h3>{props.cardContent.placeName}</h3>
+            <p>{props.cardContent.placeDescription}</p>
+            <button onClick={addToFavourite}>
+                {isFavourite ? 'Added to favourite' : 'Add to favourite'}
+            </button>
+        </div>
+    );
 }
 
-export default Card
+export default Card;

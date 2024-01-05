@@ -96,6 +96,7 @@ footer{
     border-radius: 10px;
     margin-bottom: 12px;
     object-fit: cover;
+    justify-content: space-between;
 }
 
 .card button:hover{
@@ -110,9 +111,11 @@ footer{
 .card.active button{
     background-color:#e02ca1d4;
 }
-.hero{
+.hero {
     padding: 20px;
-    background-color:lightskyblue ;
+    background-image: url("https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1704240000&semt=sph");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 70vh;
     text-align: center;
     display: flex;
@@ -120,7 +123,11 @@ footer{
     justify-content: center;
     font-weight: bold;
     font-size: 32px;
+    object-fit: cover;
 }
+
+
+
 
 ul{
     list-style: none;
