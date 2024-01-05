@@ -10,12 +10,18 @@ function App() {
   let [favImages, setFavImages] = useState([]);
 
   function getFavImages(imgSrc) {
-    setFavImages((prevFavImages) => [...prevFavImages, imgSrc]);
+    setFavImages([...favImages, imgSrc]);
   }
 
   function removeFavImages(imgSrc) {
     setFavImages((prevFavImages) => prevFavImages.filter((src) => src !== imgSrc));
   }
+
+  let userFavImages = favImages.map((imgSrc)=>{
+    return(
+      <img src={imgSrc}/>
+    )
+  })
 
   let cards = cardData.map((cardItem, index) => (
     <Card
@@ -38,9 +44,7 @@ function App() {
       <div className="card-container">{cards}</div>
       <aside>
         <h2>Favorites</h2>
-        {favImages.map((imgSrc, index) => (
-          <img key={index} src={imgSrc} alt="Favorite" />
-        ))}
+       {userFavImages}
       </aside>
       <Footer />
     </div>

@@ -152,3 +152,14 @@ ul{
     transform: translateY(0%);
     opacity:1;
 }
+
+aside h2{
+    margin-bottom:20px ;
+}
+
+aside img{
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
